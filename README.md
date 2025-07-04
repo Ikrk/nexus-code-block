@@ -14,6 +14,7 @@ cargo install --path .
 2. Add the task to Zed
 - To add globally: add the content of the [tasks.json](tasks.json) file to ~/.config/zed/tasks.json.
 - To add to a project only: create a .zed folder in the root of your project and copy the [tasks.json](tasks.json) file there.
+
 For more information about Zed tasks, [check the documentation](https://zed.dev/docs/tasks).
 
 ## Usage
@@ -26,10 +27,23 @@ Once installed:
 
 
 ## Supported OS and languages
-Currently only MacOS and Rust. Adding support for Linux and other languages should be fairly easy and can be done on request.
+Currently only MacOS is supported.
+
+Automatic language detection for the following file extensions:
+- Markup:  html, htm, xml, xhtml, svg, mathml, ssml, atom, rss
+- CSS:  css
+- C-like:  c, h, cpp, hpp, cc, cxx, cs, java, m, mm
+- JavaScript:  js, mjs, cjs
+- Rust:  rs
+- Go:  go
+- Solidity:  sol
+- Haskell:  hs, lhs
+
+Defaults to c-like language in case of unknown file extension.
+
 
 ## Example
-The following code:
+The following Rust code:
 ![editor_code_block.png](editor_code_block.png)
 
 is copied and pasted to Nexus as:
